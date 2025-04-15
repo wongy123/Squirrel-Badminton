@@ -45,7 +45,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         alt={product.name}
         sx={{ height: 250, objectFit: "cover", mt: 1 }}
       />
-      <CardContent>
+      <CardContent sx={{ flexGrow: 1 }}>
         <Typography variant="h2">
           {product.brand} {product.name}
         </Typography>
