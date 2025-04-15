@@ -7,7 +7,9 @@ const DefaultLayout = () => {
   return (
     <Box display="flex" flexDirection="column" minHeight="100vh">
       <Header />
+      <Box component="main" sx={{ flexGrow: 1 }}>
         <Outlet />
+      </Box>
       <Footer />
     </Box>
   );

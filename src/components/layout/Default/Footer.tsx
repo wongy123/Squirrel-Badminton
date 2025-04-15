@@ -2,15 +2,16 @@ import { Box, Typography, Link, Stack, AppBar } from '@mui/material';
 
 const Footer = () => {
   return (
-    <AppBar position="relative" sx={{ top: 'auto', bottom: 0 }}>
-    <Box
+    <AppBar
       component="footer"
+      elevation={3}
+      position="static" // ✅ important! static = part of normal flow
       sx={{
-        backgroundColor: 'primary',
-        py: 3,
         mt: 'auto',
+        backgroundColor: 'primary.main',
+        color: 'text.primary',
+        py: 3,
       }}
-      
     >
       <Stack direction="column" alignItems="center" spacing={1}>
         <Typography variant="caption">
@@ -39,7 +40,6 @@ const Footer = () => {
           </Link>
         </Stack>
       </Stack>
-    </Box>
     </AppBar>
   );
 };
