@@ -41,14 +41,14 @@ const HeroBanner = () => {
           variant="h1"
           fontWeight="bold"
           color="#fff"
-          sx={{ my: 2, textAlign: { xs: "center", sm: "left" } }}
+          sx={{ my: 2, textAlign: { xs: "center", sm: "left" }, letterSpacing: 3 }}
         >
           Level Up Your Game
         </Typography>
         <Typography
           variant="h2"
           color="#fff"
-          sx={{ my: 1, mb: 3, textAlign: { xs: "center", sm: "left" } }}
+          sx={{ my: 1, mb: 3, textAlign: { xs: "center", sm: "left" }, letterSpacing: 1.5 }}
         >
           Premium badminton gear for all players
         </Typography>
@@ -63,7 +63,7 @@ const HeroBanner = () => {
             alignSelf: { xs: "center", sm: "flex-start" },
           }}
         >
-          Shop Now
+            <Typography variant="body1">Shop Now</Typography>
         </Button>
       </Box>
     </Box>

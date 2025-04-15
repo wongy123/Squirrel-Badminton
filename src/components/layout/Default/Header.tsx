@@ -5,6 +5,7 @@ import {
   Typography,
   IconButton,
   Button,
+  ButtonBase,
 } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -15,13 +16,15 @@ const Header = () => {
     <AppBar position="static" color="primary" elevation={1}>
       <Toolbar sx={{ justifyContent: "space-between" }}>
         {/* Logo / Site Name */}
-        <Box
-          display="flex"
-          alignItems="center"
-          gap={1}
+        <ButtonBase
           component={RouterLink}
           to="/"
-          sx={{ textDecoration: "none" }}
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: 1,
+            textDecoration: "none",
+          }}
         >
           <Box
             component="img"
@@ -32,7 +35,7 @@ const Header = () => {
           <Typography variant="h2" color="text.primary">
             Squirrel Badminton
           </Typography>
-        </Box>
+        </ButtonBase>
 
         {/* Navigation Links + Socials */}
         <Box display="flex" alignItems="center" gap={2}>
