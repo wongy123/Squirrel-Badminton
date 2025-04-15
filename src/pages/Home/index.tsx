@@ -1,9 +1,14 @@
-import { Typography, Box, Grid } from "@mui/material";
+import { Typography, Box, Container } from "@mui/material";
 import ColourPaletteGrid from "../../components/ColourPaletteGrid";
+import HeroBanner from "./HeroBanner";
+import AboutUs from "./AboutUs";
 
 const HomePage = () => {
   return (
     <Box>
+        <HeroBanner />
+        <Container maxWidth="lg" sx={{ py: 4 }}>
+            <AboutUs />
       <Typography variant="h1">Main Title h1</Typography>
 
       <Typography variant="h2">Section Heading h2</Typography>
@@ -14,6 +19,7 @@ const HomePage = () => {
         Supporting info caption
       </Typography>
       <ColourPaletteGrid />
+      </Container>
     </Box>
   );
 };

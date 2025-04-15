@@ -1,13 +1,20 @@
-import { AppBar, Box, Toolbar, Typography, IconButton, Button } from '@mui/material';
-import SportsTennisIcon from '@mui/icons-material/SportsTennis';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import { Link as RouterLink } from 'react-router-dom';
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  Typography,
+  IconButton,
+  Button,
+} from "@mui/material";
+import SportsTennisIcon from "@mui/icons-material/SportsTennis";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import { Link as RouterLink } from "react-router-dom";
 
 const Header = () => {
   return (
     <AppBar position="static" color="primary" elevation={1}>
-      <Toolbar sx={{ justifyContent: 'space-between' }}>
+      <Toolbar sx={{ justifyContent: "space-between" }}>
         {/* Logo / Site Name */}
         <Box display="flex" alignItems="center" gap={1}>
           <SportsTennisIcon />
@@ -16,7 +23,7 @@ const Header = () => {
             component={RouterLink}
             to="/"
             color="inherit"
-            sx={{ textDecoration: 'none' }}
+            sx={{ textDecoration: "none" }}
           >
             Squirrel Badminton
           </Typography>
@@ -30,14 +37,12 @@ const Header = () => {
             color="inherit"
             sx={{ fontWeight: 500 }}
           >
-            <Typography variant='body1'>
-                Products
-            </Typography>
+            <Typography variant="body1">Products</Typography>
           </Button>
 
           <IconButton
             component="a"
-            href="https://www.instagram.com/squirrelbadminton" // TODO: replace with real link
+            href="https://www.instagram.com/squirrel.badminton/"
             target="_blank"
             rel="noopener"
             color="inherit"
@@ -47,7 +52,7 @@ const Header = () => {
 
           <IconButton
             component="a"
-            href="https://www.facebook.com/squirrelbadminton" // TODO: replace with real link
+            href="https://www.facebook.com/squirrel.badminton/"
             target="_blank"
             rel="noopener"
             color="inherit"
