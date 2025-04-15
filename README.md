@@ -53,4 +53,4 @@ export default tseslint.config({
 })
 ```
 # Squirrel-Badminton
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/148e55a9-40c8-4858-b6eb-fc72a201952e)
