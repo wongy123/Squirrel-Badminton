@@ -5,6 +5,6 @@
     "price": 10.00,
     "colour": ["White", "Black", "Red", "Yellow", "Blue", "Purple", "Orange"],
     "description": "Towel Grip (Thick)\nMaterial: 100% Cotton\nSize: 30mm x 660mm",
-    "images": ["image1.jpg"]
+    "images": ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg", "image5.jpg"]
   }
   

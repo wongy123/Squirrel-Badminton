@@ -3,21 +3,29 @@ import CircleIcon from "@mui/icons-material/Circle";
 import { Product } from "../../components/product/ProductCard";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import ProductImageSlider from "../../components/ui/ProductImageSlider";
 
 interface Props {
   product: Product;
 }
 
 const ProductIntro = ({ product }: Props) => {
-  const imageUrl = `/products/${product.brand.toLowerCase()}/${product.id}/${
-    product.images[0]
-  }`;
+  const imagePath = `/products/${product.brand.toLowerCase()}/${product.id}`;
 
   return (
-    <Grid container spacing={4} sx={{ mt: 4, flexWrap: { xs: "wrap", md: "nowrap" },  justifyContent: { xs: "center", md: "flex-start" },  }} wrap="nowrap" >
+    <Grid
+      container
+      spacing={4}
+      sx={{
+        mt: 4,
+        flexWrap: { xs: "wrap", md: "nowrap" },
+        justifyContent: { xs: "center", md: "flex-start" },
+      }}
+      wrap="nowrap"
+    >
       {/* Image */}
       <Grid item xs={12} md={5}>
-        <Box
+        {/* <Box
           component="img"
           src={imageUrl}
           alt={product.name}
@@ -27,10 +35,15 @@ const ProductIntro = ({ product }: Props) => {
             borderRadius: 2,
             objectFit: "cover",
           }}
+        /> */}
+        <ProductImageSlider
+          images={product.images}
+          imagePath={imagePath}
+          variant="detail"
         />
       </Grid>
       {/* Product Intro */}
-      <Grid item xs={12} md={7} >
+      <Grid item xs={12} md={7}>
         <Box sx={{ display: "flex", flexDirection: "column", height: "100%" }}>
           <Box
             sx={{
