@@ -1,0 +1,8 @@
+{
+    "id": "yonex-exbolt-68",
+    "name": "Yonex Exbolt 68",
+    "price": 30.00,
+    "colour": ["White", "Yellow", "Black"], 
+    "description": "POWERFUL SMASH AND DURABILITY WITH THICK GAUGE\nGauge: 0.68 mm\nCore: High-Intensity Nylon Multifilament\nOuter: Special Braided Oval Forged Fiber\nCoating: Elasticity Outer",
+    "images": [ "image1.jpg" ]
+  }
