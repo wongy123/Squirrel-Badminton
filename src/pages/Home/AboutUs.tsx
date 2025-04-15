@@ -6,7 +6,7 @@ const AboutUs = () => {
       sx={{
         display: "flex",
         flexDirection: "column",
-        my: 1,
+        my: 4,
       }}
     >
       <Typography variant="h1" align="center" sx={{my: 1}}>

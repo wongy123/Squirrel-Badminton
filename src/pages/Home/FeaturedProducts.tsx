@@ -27,6 +27,7 @@ const FeaturedProducts = () => {
     sx={{
         display: 'flex',
         flexDirection: "column",
+        my: 4
     }}>
       <Typography variant="h1" sx={{ mb: 2, textAlign: "center" }}>
         Featured Products
