@@ -4,6 +4,7 @@ import ProductsPage from "../pages/Products";
 import ProductDetailPage from "../pages/ProductDetail";
 import NotFoundPage from "../pages/NotFound";
 import DefaultLayout from "../components/layout/Default";
+import WebsiteDesign from "../pages/WebsiteDesign";
 
 const AppRouter = () => {
   return (
@@ -14,9 +15,10 @@ const AppRouter = () => {
           <Route index element={<ProductsPage />} />
           <Route path=":brand/:id" element={<ProductDetailPage />} />
         </Route>
+        <Route path="/not-found" element={<NotFoundPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+        <Route path="/design" element={<WebsiteDesign />} />
       </Route>
-      <Route path="/not-found" element={<NotFoundPage />} />
-      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 };

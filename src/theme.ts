@@ -43,6 +43,17 @@ const theme = createTheme({
       fontSize: '0.875rem', // 14px
     },
   },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          backgroundImage: 'url("/images/BackgroundPattern.png")',
+          backgroundRepeat: 'repeat',
+          backgroundSize: '500px',
+        },
+      },
+    },
+  },
 });
 
 export default theme;

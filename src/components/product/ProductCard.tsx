@@ -1,5 +1,14 @@
-import { Card, CardMedia, CardContent, Typography, Box } from "@mui/material";
+import {
+  Card,
+  CardMedia,
+  CardContent,
+  Typography,
+  Box,
+  Button,
+  CardActions,
+} from "@mui/material";
 import CircleIcon from "@mui/icons-material/Circle";
+import { Link as RouterLink } from "react-router-dom";
 
 export interface Product {
   id: string;
@@ -19,9 +28,17 @@ const ProductCard = ({ product }: ProductCardProps) => {
   const imageUrl = `/products/${product.brand.toLowerCase()}/${product.id}/${
     product.images[0]
   }`;
+  const productUrl = `/products/${product.brand.toLowerCase()}/${product.id}`;
 
   return (
-    <Card sx={{ width: 240, height: '100%', display: 'flex', flexDirection: 'column'  }}>
+    <Card
+      sx={{
+        width: 240,
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       <CardMedia
         component="img"
         image={imageUrl}
@@ -32,9 +49,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         <Typography variant="h2">
           {product.brand} {product.name}
         </Typography>
-        <Typography variant="body1" >
-          ${product.price.toFixed(2)}
-        </Typography>
+        <Typography variant="body1">${product.price.toFixed(2)}</Typography>
         {product.colour?.length > 0 && (
           <Box
             sx={{
@@ -62,6 +77,19 @@ const ProductCard = ({ product }: ProductCardProps) => {
           </Box>
         )}
       </CardContent>
+
+      <CardActions sx={{ px: 2, pb: 2 }}>
+        <Button
+          variant="outlined"
+          color="secondary"
+          size="small"
+          component={RouterLink}
+          to={productUrl}
+          fullWidth
+        >
+            <Typography variant="body1">View Product</Typography>
+        </Button>
+      </CardActions>
     </Card>
   );
 };
