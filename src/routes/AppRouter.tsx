@@ -8,12 +8,14 @@ import DefaultLayout from "../components/layout/Default";
 const AppRouter = () => {
   return (
     <Routes>
-        <Route element={<DefaultLayout />}>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/products" element={<ProductsPage />} />
-      <Route path="/products/:id" element={<ProductDetailPage />} />
-      
+      <Route element={<DefaultLayout />}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/products">
+          <Route index element={<ProductsPage />} />
+          <Route path=":brand/:id" element={<ProductDetailPage />} />
+        </Route>
       </Route>
+      <Route path="/not-found" element={<NotFoundPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
