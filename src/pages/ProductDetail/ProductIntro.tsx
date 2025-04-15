@@ -1,8 +1,8 @@
 import { Grid, Typography, Box, Button } from "@mui/material";
 import CircleIcon from "@mui/icons-material/Circle";
 import { Product } from "../../components/product/ProductCard";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 interface Props {
   product: Product;
@@ -14,7 +14,7 @@ const ProductIntro = ({ product }: Props) => {
   }`;
 
   return (
-    <Grid container spacing={4}>
+    <Grid container spacing={4} sx={{ mt: 4 }}>
       {/* Image */}
       <Grid item xs={12} md={5}>
         <Box
@@ -59,7 +59,11 @@ const ProductIntro = ({ product }: Props) => {
                   gap: 0.5,
                 }}
               >
-                <Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.5 }}>
+                <Typography
+                  variant="body1"
+                  color="text.secondary"
+                  sx={{ lineHeight: 1.5 }}
+                >
                   Available in:
                 </Typography>
                 <Box sx={{ display: "flex", gap: 1, flexWrap: "wrap" }}>
@@ -71,7 +75,7 @@ const ProductIntro = ({ product }: Props) => {
                         color: c.toLowerCase(),
                         stroke: "#444",
                         strokeWidth: 1.2,
-                        lineHeight: 1.5
+                        lineHeight: 1.5,
                       }}
                     />
                   ))}
@@ -101,17 +105,17 @@ const ProductIntro = ({ product }: Props) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Messenger
+                  <Typography variant="body1">Messenger</Typography>
                 </Button>
                 <Button
                   variant="outlined"
                   color="secondary"
-                  startIcon={<WhatsAppIcon />}
-                  href={`https://wa.me/1234567890`}
+                  startIcon={<InstagramIcon />}
+                  href={`https://ig.me/m/squirrel.badminton`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  WhatsApp
+                  <Typography variant="body1">Instagram</Typography>
                 </Button>
               </Box>
             </Box>

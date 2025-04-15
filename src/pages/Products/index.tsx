@@ -54,30 +54,39 @@ const ProductsPage = () => {
           All Products
         </Typography>
         {/* Filter */}
-        <Box sx={{ my: 3, alignSelf: "center" }}>
-          <Typography variant="body1" sx={{ mb: 1 }}>
-            Filter by brand:
-          </Typography>
-          <Stack direction="row" spacing={2}>
-            <Button
-              variant={brandFilter === null ? "contained" : "outlined"}
-              onClick={() => setBrandFilter(null)}
-              color="secondary"
-            >
-              <Typography variant="caption">All</Typography>
-            </Button>
-            {brandList.map(({ slug, name }) => (
-              <Button
-                key={slug}
-                variant={brandFilter === slug ? "contained" : "outlined"}
-                onClick={() => setBrandFilter(slug)}
-                color="secondary"
-              >
-                <Typography variant="caption">{name}</Typography>
-              </Button>
-            ))}
-          </Stack>
-        </Box>
+        <Box sx={{ my: 3, alignSelf: "center", textAlign: "center" }}>
+  <Typography variant="body1" sx={{ mb: 1 }}>
+    Filter by brand:
+  </Typography>
+
+  <Box
+    sx={{
+      display: "flex",
+      flexWrap: "wrap",
+      justifyContent: "center",
+      gap: 2,
+    }}
+  >
+    <Button
+      variant={brandFilter === null ? "contained" : "outlined"}
+      onClick={() => setBrandFilter(null)}
+      color="secondary"
+    >
+      <Typography variant="caption">All</Typography>
+    </Button>
+
+    {brandList.map(({ slug, name }) => (
+      <Button
+        key={slug}
+        variant={brandFilter === slug ? "contained" : "outlined"}
+        onClick={() => setBrandFilter(slug)}
+        color="secondary"
+      >
+        <Typography variant="caption">{name}</Typography>
+      </Button>
+    ))}
+  </Box>
+</Box>
 
         <ProductList products={filteredProducts} />
       </Box>
