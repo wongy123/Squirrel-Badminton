@@ -14,7 +14,7 @@ const ProductIntro = ({ product }: Props) => {
   }`;
 
   return (
-    <Grid container spacing={4} sx={{ mt: 4 }}>
+    <Grid container spacing={4} sx={{ mt: 4, flexWrap: { xs: "wrap", md: "nowrap" },  justifyContent: { xs: "center", md: "flex-start" },  }} wrap="nowrap" >
       {/* Image */}
       <Grid item xs={12} md={5}>
         <Box
@@ -30,7 +30,7 @@ const ProductIntro = ({ product }: Props) => {
         />
       </Grid>
       {/* Product Intro */}
-      <Grid item xs={12} md={7}>
+      <Grid item xs={12} md={7} >
         <Box sx={{ display: "flex", flexDirection: "column", height: "100%" }}>
           <Box
             sx={{
