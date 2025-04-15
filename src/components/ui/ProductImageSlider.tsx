@@ -22,11 +22,17 @@ const styles = {
   },
 } as const;
 
-const ProductImageSlider = ({ images, imagePath, variant = "detail" }: Props) => {
+const ProductImageSlider = ({
+  images,
+  imagePath,
+  variant = "detail",
+}: Props) => {
+  const isSingleImage = images.length === 1;
+
   const settings = {
-    dots: true,
-    arrows: true,
-    infinite: true,
+    dots: !isSingleImage,
+    arrows: !isSingleImage,
+    infinite: !isSingleImage,
     speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
