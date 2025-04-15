@@ -4,8 +4,7 @@ import ProductCard, { Product } from '../../components/product/ProductCard';
 
 const productFolders = [  'yonex/exbolt-68',
     'yonex/bg66-w',
-    'yonex/exbolt-68',
-    'yonex/exbolt-68',];
+    'gosen/bs065'];
 
 const FeaturedProducts = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -35,7 +34,7 @@ const FeaturedProducts = () => {
       <Typography variant="h1" sx={{ mb: 2, textAlign: "center" }}>
         Featured Products
       </Typography>
-      <Grid container spacing={4} justifyContent="center">
+      <Grid container spacing={4} justifyContent="center" alignItems="stretch">
         {products.map((product) => (
           <Grid item key={product.id} xs={12} sm={6} md={4}>
             <ProductCard product={product} />

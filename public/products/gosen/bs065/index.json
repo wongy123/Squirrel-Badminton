@@ -1,0 +1,9 @@
+{
+    "id": "bs065",
+    "name": "G-Tone5",
+    "brand": "Gosen",
+    "price": 30.00,
+    "colour": ["White", "Yellow", "Blue", "Green", "Orange", "Salmon"], 
+    "description": "GOSEN'S ADVANCED TECHNOLOGY STRING PROVIDES SUPREME RESILIENCE AND CRISP HITTING SOUND BY 0.65mm GAUGE.\nMaterial: Nylon multi-filament with patented high-strength Quattro-fiber wraps\nGauge: 0.65 mm (22 GA.)\nLength: 10 m (33 FT.)\nRecommended Tension: 18–27 lbs\nOrigin: Made in Japan",
+    "images": [ "image1.jpg" ]
+  }

@@ -8,7 +8,9 @@ type ProductIndexEntry = { brand: string; id: string };
 const ProductsPage = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [brandFilter, setBrandFilter] = useState<string | null>(null);
-  const brandNames = Array.from(new Set(products.map((p) => p.brand)));
+  const [brandList, setBrandList] = useState<{ slug: string; name: string }[]>(
+    []
+  );
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -25,11 +27,18 @@ const ProductsPage = () => {
       setProducts(productData);
     };
 
+    const fetchBrands = async () => {
+      const res = await fetch("/products/brands.json");
+      const brands = await res.json();
+      setBrandList(brands);
+    };
+
     fetchProducts();
+    fetchBrands();
   }, []);
 
   const filteredProducts = brandFilter
-    ? products.filter((p) => p.brand === brandFilter)
+    ? products.filter((p) => p.brand.toLowerCase() === brandFilter)
     : products;
 
   return (
@@ -57,14 +66,14 @@ const ProductsPage = () => {
             >
               <Typography variant="caption">All</Typography>
             </Button>
-            {brandNames.map((brand) => (
+            {brandList.map(({ slug, name }) => (
               <Button
-                key={brand}
-                variant={brandFilter === brand ? "contained" : "outlined"}
-                onClick={() => setBrandFilter(brand)}
+                key={slug}
+                variant={brandFilter === slug ? "contained" : "outlined"}
+                onClick={() => setBrandFilter(slug)}
                 color="secondary"
               >
-                <Typography variant="caption">{brand}</Typography>
+                <Typography variant="caption">{name}</Typography>
               </Button>
             ))}
           </Stack>
