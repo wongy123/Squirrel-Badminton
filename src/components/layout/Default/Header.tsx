@@ -10,6 +10,7 @@ import {
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import { Link as RouterLink } from "react-router-dom";
+import MobileMenu from "./MobileMenu";
 
 const Header = () => {
   return (
@@ -38,7 +39,10 @@ const Header = () => {
         </ButtonBase>
 
         {/* Navigation Links + Socials */}
-        <Box display="flex" alignItems="center" gap={2}>
+        <Box sx={{ ml: "auto" }}>
+  <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2 }}>
+    {/* Desktop nav items */}
+    <Box display="flex" alignItems="center" gap={2}>
           <Button component={RouterLink} to="/products" color="inherit">
             <Typography variant="body1">Products</Typography>
           </Button>
@@ -63,6 +67,10 @@ const Header = () => {
             <FacebookIcon />
           </IconButton>
         </Box>
+  </Box>
+
+  <MobileMenu />
+</Box>
       </Toolbar>
     </AppBar>
   );
