@@ -2,7 +2,10 @@ import { useEffect, useState } from 'react';
 import { Grid, Typography, Box } from '@mui/material';
 import ProductCard, { Product } from '../../components/product/ProductCard';
 
-const productFolders = ['yonex-exbolt-68','yonex-exbolt-68','yonex-exbolt-68','yonex-exbolt-68',];
+const productFolders = [  'yonex/exbolt-68',
+    'yonex/bg66-w',
+    'yonex/exbolt-68',
+    'yonex/exbolt-68',];
 
 const FeaturedProducts = () => {
   const [products, setProducts] = useState<Product[]>([]);

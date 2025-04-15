@@ -4,6 +4,7 @@ import CircleIcon from "@mui/icons-material/Circle";
 export interface Product {
   id: string;
   name: string;
+  brand: string;
   price: number;
   colour?: string[];
   description: string;
@@ -15,18 +16,18 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ product }: ProductCardProps) => {
-  const imageUrl = `/products/${product.id}/${product.images[0]}`;
+    const imageUrl = `/products/${product.brand.toLowerCase()}/${product.id}/${product.images[0]}`;
 
   return (
-    <Card sx={{ maxWidth: 300, width: "100%" }}>
+    <Card sx={{ width: 200, height: 400}}>
       <CardMedia
         component="img"
         image={imageUrl}
         alt={product.name}
-        sx={{ height: 200, objectFit: "cover", mt: 1 }}
+        sx={{ height: 250, objectFit: "cover", mt: 1 }}
       />
       <CardContent>
-        <Typography variant="h2">{product.name}</Typography>
+        <Typography variant="h2">{product.brand} {product.name}</Typography>
         <Typography variant="body1" color="text.secondary">
           ${product.price.toFixed(2)}
         </Typography>

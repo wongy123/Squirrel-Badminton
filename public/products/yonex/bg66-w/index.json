@@ -1,0 +1,9 @@
+{
+    "id": "bg66-w",
+    "name": "BG66",
+    "brand": "Yonex",
+    "price": 30.00,
+    "colour": ["White"], 
+    "description": "This ultra-thin gauge string offers the ultimate in repulsion power and a clear hitting sound.\nGauge: 0.66 mm\nLength: 10 m (33 ft)\nCore: High Polymer Nylon Multifilament\nOuter: Special Braided High Polymer Nylon Fiber\nMade In: Japan",
+    "images": [ "image1.jpg" ]
+  }
