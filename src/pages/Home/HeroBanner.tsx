@@ -13,6 +13,7 @@ const HeroBanner = () => {
         backgroundRepeat: "no-repeat",
         display: "flex",
         alignItems: "center",
+        justifyContent: { xs: "center", sm: "flex-start"}
       }}
     >
       <Box
