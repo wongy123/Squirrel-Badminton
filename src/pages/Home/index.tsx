@@ -7,7 +7,8 @@ const HomePage = () => {
   return (
     <Box>
         <HeroBanner />
-        <Container maxWidth="lg" sx={{ py: 4 }}>
+        <Container maxWidth="lg">
+        
             <AboutUs />
       <Typography variant="h1">Main Title h1</Typography>
 

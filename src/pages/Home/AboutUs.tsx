@@ -9,7 +9,7 @@ const AboutUs = () => {
         my: 1,
       }}
     >
-      <Typography variant="h1" gutterBottom align="center">
+      <Typography variant="h1" align="center" sx={{my: 1}}>
         ABOUT SQUIRREL BADMINTON
       </Typography>
       <Typography variant="body1" my={1}>

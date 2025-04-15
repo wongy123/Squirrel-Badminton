@@ -2,7 +2,7 @@ import { Box, Typography, Link, Stack, AppBar } from '@mui/material';
 
 const Footer = () => {
   return (
-    <AppBar position="fixed" sx={{ top: 'auto', bottom: 0 }}>
+    <AppBar position="relative" sx={{ top: 'auto', bottom: 0 }}>
     <Box
       component="footer"
       sx={{
