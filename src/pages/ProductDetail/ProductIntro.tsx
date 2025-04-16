@@ -4,13 +4,16 @@ import { Product } from "../../components/product/ProductCard";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import ProductImageSlider from "../../components/ui/ProductImageSlider";
+import basePath from "../../utils/basePath";
 
 interface Props {
   product: Product;
 }
 
 const ProductIntro = ({ product }: Props) => {
-  const imagePath = `/products/${product.brand.toLowerCase()}/${product.id}`;
+  const imagePath = `${basePath}/products/${product.brand.toLowerCase()}/${
+    product.id
+  }`;
 
   return (
     <Grid

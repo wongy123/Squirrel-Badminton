@@ -1,5 +1,6 @@
 import { Box, Typography, Button } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
+import basePath from "../../utils/basePath";
 
 const HeroBanner = () => {
   return (
@@ -7,7 +8,7 @@ const HeroBanner = () => {
       sx={{
         position: "relative",
         height: { xs: 300, sm: 400, md: 500 },
-        backgroundImage: `url(/images/HeroBackground.avif)`,
+        backgroundImage: `url(${basePath}/images/HeroBackground.avif)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

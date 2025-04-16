@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import CircleIcon from "@mui/icons-material/Circle";
 import { Link as RouterLink } from "react-router-dom";
+import basePath from "../../utils/basePath";
 
 export interface Product {
   id: string;
@@ -25,10 +26,12 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ product }: ProductCardProps) => {
-  const imageUrl = `/products/${product.brand.toLowerCase()}/${product.id}/${
-    product.images[0]
+  const imageUrl = `${basePath}/products/${product.brand.toLowerCase()}/${
+    product.id
+  }/${product.images[0]}`;
+  const productUrl = `/products/${product.brand.toLowerCase()}/${
+    product.id
   }`;
-  const productUrl = `/products/${product.brand.toLowerCase()}/${product.id}`;
 
   return (
     <Card
@@ -87,7 +90,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           to={productUrl}
           fullWidth
         >
-            <Typography variant="body1">View Product</Typography>
+          <Typography variant="body1">View Product</Typography>
         </Button>
       </CardActions>
     </Card>

@@ -11,8 +11,11 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import { Link as RouterLink } from "react-router-dom";
 import MobileMenu from "./MobileMenu";
+import basePath from "../../../utils/basePath"
 
 const Header = () => {
+  const logoUrl = `${basePath}/images/RealisticLogo.png`;
+
   return (
     <AppBar position="static" color="primary" elevation={1}>
       <Toolbar sx={{ justifyContent: "space-between" }}>
@@ -29,7 +32,7 @@ const Header = () => {
         >
           <Box
             component="img"
-            src="/images/RealisticLogo.png"
+            src={logoUrl}
             alt="Squirrel Badminton"
             sx={{ height: 70 }}
           />
@@ -40,37 +43,37 @@ const Header = () => {
 
         {/* Navigation Links + Socials */}
         <Box sx={{ ml: "auto" }}>
-  <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2 }}>
-    {/* Desktop nav items */}
-    <Box display="flex" alignItems="center" gap={2}>
-          <Button component={RouterLink} to="/products" color="inherit">
-            <Typography variant="body1">Products</Typography>
-          </Button>
+          <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2 }}>
+            {/* Desktop nav items */}
+            <Box display="flex" alignItems="center" gap={2}>
+              <Button component={RouterLink} to="/products" color="inherit">
+                <Typography variant="body1">Products</Typography>
+              </Button>
 
-          <IconButton
-            component="a"
-            href="https://www.instagram.com/squirrel.badminton/"
-            target="_blank"
-            rel="noopener"
-            color="inherit"
-          >
-            <InstagramIcon />
-          </IconButton>
+              <IconButton
+                component="a"
+                href="https://www.instagram.com/squirrel.badminton/"
+                target="_blank"
+                rel="noopener"
+                color="inherit"
+              >
+                <InstagramIcon />
+              </IconButton>
 
-          <IconButton
-            component="a"
-            href="https://www.facebook.com/squirrel.badminton/"
-            target="_blank"
-            rel="noopener"
-            color="inherit"
-          >
-            <FacebookIcon />
-          </IconButton>
+              <IconButton
+                component="a"
+                href="https://www.facebook.com/squirrel.badminton/"
+                target="_blank"
+                rel="noopener"
+                color="inherit"
+              >
+                <FacebookIcon />
+              </IconButton>
+            </Box>
+          </Box>
+
+          <MobileMenu />
         </Box>
-  </Box>
-
-  <MobileMenu />
-</Box>
       </Toolbar>
     </AppBar>
   );

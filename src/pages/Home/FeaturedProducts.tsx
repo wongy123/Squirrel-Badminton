@@ -1,10 +1,9 @@
-import { useEffect, useState } from 'react';
-import { Grid, Typography, Box } from '@mui/material';
-import ProductCard, { Product } from '../../components/product/ProductCard';
+import { useEffect, useState } from "react";
+import { Grid, Typography, Box } from "@mui/material";
+import ProductCard, { Product } from "../../components/product/ProductCard";
+import basePath from "../../utils/basePath";
 
-const productFolders = [  'yonex/exbolt-68',
-    'yonex/bg66-w',
-    'gosen/bs065'];
+const productFolders = ["yonex/exbolt-68", "yonex/bg66-w", "gosen/bs065"];
 
 const FeaturedProducts = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -13,7 +12,7 @@ const FeaturedProducts = () => {
     const fetchProducts = async () => {
       const productData = await Promise.all(
         productFolders.map(async (folder) => {
-          const res = await fetch(`/products/${folder}/index.json`);
+          const res = await fetch(`${basePath}/products/${folder}/index.json`);
           return res.json();
         })
       );
@@ -26,11 +25,12 @@ const FeaturedProducts = () => {
 
   return (
     <Box
-    sx={{
-        display: 'flex',
+      sx={{
+        display: "flex",
         flexDirection: "column",
-        my: 4
-    }}>
+        my: 4,
+      }}
+    >
       <Typography variant="h1" sx={{ mb: 2, textAlign: "center" }}>
         Featured Products
       </Typography>

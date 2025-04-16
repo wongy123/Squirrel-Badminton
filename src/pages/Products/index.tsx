@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { Box, Typography, Container, Stack, Button } from "@mui/material";
+import { Box, Typography, Container, Button } from "@mui/material";
 import { Product } from "../../components/product/ProductCard";
 import ProductList from "./ProductList";
+import basePath from "../../utils/basePath";
 
 type ProductIndexEntry = { brand: string; id: string };
 
@@ -16,12 +17,14 @@ const ProductsPage = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const indexRes = await fetch("/products/index.json");
+      const indexRes = await fetch(`${basePath}/products/index.json`);
       const entries: ProductIndexEntry[] = await indexRes.json();
 
       const productData = await Promise.all(
         entries.map(async ({ brand, id }) => {
-          const res = await fetch(`/products/${brand}/${id}/index.json`);
+          const res = await fetch(
+            `${basePath}/products/${brand}/${id}/index.json`
+          );
           return res.json();
         })
       );
@@ -30,7 +33,7 @@ const ProductsPage = () => {
     };
 
     const fetchBrands = async () => {
-      const res = await fetch("/products/brands.json");
+      const res = await fetch(`${basePath}/products/brands.json`);
       const brands = await res.json();
       setBrandList(brands);
     };

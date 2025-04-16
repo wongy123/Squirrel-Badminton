@@ -1,4 +1,4 @@
-import { Typography, Box, Container } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import HeroBanner from "./HeroBanner";
 import AboutUs from "./AboutUs";
 import FeaturedProducts from "./FeaturedProducts";

@@ -4,6 +4,7 @@ import { Box, CircularProgress, Container } from "@mui/material";
 import { Product } from "../../components/product/ProductCard";
 import ProductIntro from "./ProductIntro";
 import ProductDescription from "./ProductDescription";
+import basePath from "../../utils/basePath";
 
 const ProductDetailPage = () => {
   const { brand, id } = useParams<{ brand: string; id: string }>();
@@ -19,7 +20,9 @@ const ProductDetailPage = () => {
 
     (async () => {
       try {
-        const res = await fetch(`/products/${brand}/${id}/index.json`);
+        const res = await fetch(
+          `${basePath}/products/${brand}/${id}/index.json`
+        );
         if (!res.ok) throw new Error("Not found");
         const data = await res.json();
         setProduct(data);

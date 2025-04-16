@@ -1,5 +1,5 @@
 import ProductCard, { Product } from "../../components/product/ProductCard";
-import { Box, Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 
 interface ProductListProps {
   products: Product[];
