@@ -10,6 +10,7 @@ import {
 import CircleIcon from "@mui/icons-material/Circle";
 import { Link as RouterLink } from "react-router-dom";
 import basePath from "../../utils/basePath";
+import Tooltip from "@mui/material/Tooltip";
 
 export interface Product {
   id: string;
@@ -65,6 +66,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
             </Typography>
             <Box sx={{ display: "flex", gap: 1 }}>
               {(product.colour ?? []).map((c) => (
+                <Tooltip key={c} title={c} arrow>
                 <CircleIcon
                   key={c}
                   sx={{
@@ -74,6 +76,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
                     strokeWidth: 1.2,
                   }}
                 />
+                </Tooltip>
               ))}
             </Box>
           </Box>
