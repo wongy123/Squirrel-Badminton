@@ -99,18 +99,29 @@ const ProductsPage = () => {
           </Box>
         </Box>
 
-        <ProductList products={visibleProducts} />
-
-        {visibleCount < filteredProducts.length && (
-          <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
-            <Button
-              variant="contained"
-              color="secondary"
-              onClick={handleLoadMore}
-            >
-              <Typography variant="body1">Load More</Typography>
-            </Button>
-          </Box>
+        {filteredProducts.length === 0 ? (
+          <Typography
+            variant="body1"
+            color="text.secondary"
+            sx={{ my: 4, textAlign: "center" }}
+          >
+            No products available for this filter.
+          </Typography>
+        ) : (
+          <>
+            <ProductList products={visibleProducts} />
+            {visibleCount < filteredProducts.length && (
+              <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  onClick={handleLoadMore}
+                >
+                  <Typography variant="body1">Load More</Typography>
+                </Button>
+              </Box>
+            )}
+          </>
         )}
       </Box>
     </Container>
