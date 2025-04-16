@@ -14,7 +14,6 @@
 { "brand": "mizuno", "id": "mizuno-65h" },
 { "brand": "mizuno", "id": "mizuno-65r" },
 { "brand": "mizuno", "id": "mizuno-68s" },
-{ "brand": "misc", "id": "byo-stringing" },
 { "brand": "redson", "id": "redson-s3" },
 { "brand": "toalson", "id": "ion65" },
 { "brand": "victor", "id": "90kii" },
@@ -37,5 +36,6 @@
 { "brand": "yonex", "id": "duo-zs" },
 { "brand": "yonex", "id": "exbolt-68" },
 { "brand": "yonex", "id": "nbg95" },
-{ "brand": "yonex", "id": "nbg98" }
+{ "brand": "yonex", "id": "nbg98" },
+{ "brand": "misc", "id": "byo-stringing" }
 ]
