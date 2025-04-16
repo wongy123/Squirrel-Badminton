@@ -1,12 +1,13 @@
 [
-    { "slug": "yonex", "name": "Yonex" },
     { "slug": "gosen", "name": "Gosen" },
-    { "slug": "li-ning", "name": "LiNing" },
     { "slug": "kizuna", "name": "Kizuna" },
+    { "slug": "li-ning", "name": "LiNing" },
     { "slug": "lingmei", "name": "LingMei" },
     { "slug": "mizuno", "name": "Mizuno" },
     { "slug": "redson", "name": "Redson" },
-    { "slug": "victor", "name": "Victor" },
     { "slug": "toalson", "name": "Toalson" },
+    { "slug": "victor", "name": "Victor" },
+    { "slug": "yonex", "name": "Yonex" },
     { "slug": "misc", "name": "Misc." }
-]
+  ]
+  
