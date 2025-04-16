@@ -1,4 +1,4 @@
-import { Grid, Typography, Box, Button } from "@mui/material";
+import { Grid, Typography, Box, Button, Tooltip } from "@mui/material";
 import CircleIcon from "@mui/icons-material/Circle";
 import { Product } from "../../components/product/ProductCard";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -84,6 +84,7 @@ const ProductIntro = ({ product }: Props) => {
                 </Typography>
                 <Box sx={{ display: "flex", gap: 1, flexWrap: "wrap" }}>
                   {(product.colour ?? []).map((c) => (
+                    <Tooltip key={c} title={c} arrow>
                     <CircleIcon
                       key={c}
                       sx={{
@@ -94,6 +95,7 @@ const ProductIntro = ({ product }: Props) => {
                         lineHeight: 1.5,
                       }}
                     />
+                    </Tooltip>
                   ))}
                 </Box>
                 <Typography variant="caption" color="text.secondary">
