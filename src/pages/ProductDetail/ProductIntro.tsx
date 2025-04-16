@@ -27,7 +27,7 @@ const ProductIntro = ({ product }: Props) => {
       wrap="nowrap"
     >
       {/* Image */}
-      <Grid item xs={12} md={5}>
+      <Grid size={{ xs: 12, md: 5 }}>
         {/* <Box
           component="img"
           src={imageUrl}
@@ -46,7 +46,7 @@ const ProductIntro = ({ product }: Props) => {
         />
       </Grid>
       {/* Product Intro */}
-      <Grid item xs={12} md={7}>
+      <Grid size={{ xs: 12, md: 7 }}>
         <Box sx={{ display: "flex", flexDirection: "column", height: "100%" }}>
           <Box
             sx={{
@@ -67,7 +67,7 @@ const ProductIntro = ({ product }: Props) => {
               Brand: {product.brand}
             </Typography>
             {/* Colours */}
-            {product.colour?.length > 0 && (
+            {(product.colour ?? []).length > 0 && (
               <Box
                 sx={{
                   display: "flex",
@@ -83,7 +83,7 @@ const ProductIntro = ({ product }: Props) => {
                   Available in:
                 </Typography>
                 <Box sx={{ display: "flex", gap: 1, flexWrap: "wrap" }}>
-                  {product.colour.map((c) => (
+                  {(product.colour ?? []).map((c) => (
                     <CircleIcon
                       key={c}
                       sx={{
