@@ -96,6 +96,9 @@ const ProductIntro = ({ product }: Props) => {
                     />
                   ))}
                 </Box>
+                <Typography variant="caption" color="text.secondary">
+                  {(product.colour ?? []).join(", ")}
+                </Typography>
               </Box>
             )}
             <Typography variant="h2" sx={{ my: 2, lineHeight: 2 }}>
