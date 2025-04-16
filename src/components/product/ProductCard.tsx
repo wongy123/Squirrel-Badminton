@@ -29,9 +29,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
   const imageUrl = `${basePath}/products/${product.brand.toLowerCase()}/${
     product.id
   }/${product.images[0]}`;
-  const productUrl = `/products/${product.brand.toLowerCase()}/${
-    product.id
-  }`;
+  const productUrl = `/products/${product.brand.toLowerCase()}/${product.id}`;
 
   return (
     <Card
@@ -53,7 +51,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           {product.brand} {product.name}
         </Typography>
         <Typography variant="body1">${product.price.toFixed(2)}</Typography>
-        {product.colour?.length > 0 && (
+        {(product.colour ?? []).length > 0 && (
           <Box
             sx={{
               display: "flex",
@@ -65,7 +63,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
               Available in:
             </Typography>
             <Box sx={{ display: "flex", gap: 1 }}>
-              {product.colour.map((c) => (
+              {(product.colour ?? []).map((c) => (
                 <CircleIcon
                   key={c}
                   sx={{
