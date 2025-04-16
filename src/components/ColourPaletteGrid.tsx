@@ -41,38 +41,38 @@ const ColourPaletteGrid = () => {
       </Typography>
 
       <Grid container spacing={2}>
-        <Grid item xs={6} sm={3}>
+        <Grid size={{ xs: 6, sm: 3 }}>
           <ColourBlock label="Primary" color={primary.main} />
         </Grid>
-        <Grid item xs={6} sm={3}>
+        <Grid size={{ xs: 6, sm: 3 }}>
           <ColourBlock
             label="Secondary"
             color={secondary.main}
             textColor={background.default}
           />
         </Grid>
-        <Grid item xs={6} sm={3}>
+        <Grid size={{ xs: 6, sm: 3 }}>
           <ColourBlock
             label="Background Default"
             color={background.default}
             textColor="#000"
           />
         </Grid>
-        <Grid item xs={6} sm={3}>
+        <Grid size={{ xs: 6, sm: 3 }}>
           <ColourBlock
             label="Background Paper"
             color={background.paper}
             textColor="#000"
           />
         </Grid>
-        <Grid item xs={6} sm={3}>
+        <Grid size={{ xs: 6, sm: 3 }}>
           <ColourBlock
             label="Text Primary"
             color={text.primary}
             textColor={background.default}
           />
         </Grid>
-        <Grid item xs={6} sm={3}>
+        <Grid size={{ xs: 6, sm: 3 }}>
           <ColourBlock
             label="Text Secondary"
             color={text.secondary}
