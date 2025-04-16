@@ -46,41 +46,61 @@ const ProductCard = ({ product }: ProductCardProps) => {
         component="img"
         image={imageUrl}
         alt={product.name}
-        sx={{ height: 250, objectFit: "cover", mt: 1 }}
+        sx={{
+          height: 250,
+          objectFit: "contain",
+          mt: 1,
+          backgroundColor: "#ffffff",
+        }}
       />
-      <CardContent sx={{ flexGrow: 1 }}>
+      <CardContent
+        sx={{
+          flexGrow: 1,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+        }}
+      >
+        {/* Product Name */}
         <Typography variant="h2">
           {product.brand} {product.name}
         </Typography>
-        <Typography variant="body1">${product.price.toFixed(2)}</Typography>
-        {(product.colour ?? []).length > 0 && (
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              gap: 1,
-            }}
-          >
-            <Typography variant="caption" color="text.secondary">
-              Available in:
-            </Typography>
-            <Box sx={{ display: "flex", gap: 1 }}>
-              {(product.colour ?? []).map((c) => (
-                <Tooltip key={c} title={c} arrow>
-                <CircleIcon
-                  key={c}
-                  sx={{
-                    fontSize: 16,
-                    color: c.toLowerCase(),
-                    stroke: "#444",
-                    strokeWidth: 1.2,
-                  }}
-                />
-                </Tooltip>
-              ))}
+
+        <Box sx={{ mt: "auto" }}>
+          {/* Product Price */}
+          <Typography variant="body1">${product.price.toFixed(2)}</Typography>
+
+          {/* Product Colours */}
+          {(product.colour ?? []).length > 0 && (
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                gap: 1,
+              }}
+            >
+              <Typography variant="caption" color="text.secondary">
+                Available in:
+              </Typography>
+              <Box sx={{ display: "flex", gap: 1 }}>
+                {(product.colour ?? []).map((c) => (
+                  <Tooltip key={c} title={c} arrow>
+                    <CircleIcon
+                      key={c}
+                      sx={{
+                        fontSize: 16,
+                        color: c.toLowerCase(),
+                        stroke: "#444",
+                        strokeWidth: 1.2,
+                      }}
+                    />
+                  </Tooltip>
+                ))}
+              </Box>
             </Box>
-          </Box>
-        )}
+          )}
+          
+        </Box>
       </CardContent>
 
       <CardActions sx={{ px: 2, pb: 2 }}>
