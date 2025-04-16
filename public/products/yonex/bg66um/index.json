@@ -1,0 +1,10 @@
+{
+    "id": "bg66um",
+    "name": "BG66UM",
+    "brand": "Yonex",
+    "price": 30.00,
+    "colour": ["Red", "Yellow", "Orange", "Black", "Silver", "Pink", "Navy", "Green", "Blue"],
+    "description": "The BG66UM has a 0.65mm thin gauge and offers the perfect balance of maximum speed, control, and durability — a top choice for the world’s best players.\n\nGauge: 0.65 mm\nLength: 10 m (33 ft) / 200 m (656 ft)\nCore: High-Intensity Nylon Multifilament\nOuter: Special Braided High Polymer Nylon Fiber\nMade in Japan",
+    "images": ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg", "image5.jpg"]
+  }
+  

@@ -1,0 +1,10 @@
+{
+    "id": "ion65",
+    "name": "ION65",
+    "brand": "Toalson",
+    "price": 30.00,
+    "colour": ["Red", "Sky Blue", "White", "Pink", "Turqoise", "Orange"],
+    "description": "High elastic ultra thin nylon multifilament center core and high elastic ultra thin nylon monofilament outer wraps provide high resiliency using Toalson's latest special braided process technology. It is completed with total performance.",
+    "images": ["image1.jpg"]
+  }
+  

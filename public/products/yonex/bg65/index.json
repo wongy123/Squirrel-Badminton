@@ -1,0 +1,10 @@
+{
+    "id": "bg65",
+    "name": "BG65",
+    "brand": "Yonex",
+    "price": 30.00,
+    "colour": ["Beige", "White", "Yellow"],
+    "description": "The 0.70mm specially braided fibre increases string abrasion durability. The BG65's all-round performance makes it the choice of the world's top players.\n\nGauge: 0.70 mm\nLength: 10 m (33 ft) / 200 m (656 ft) / 500 m (1,640 ft)\nCore: High Polymer Nylon Multifilament\nOuter: Special Braided High Polymer Nylon Fiber\nMade in Japan",
+    "images": ["image1.jpg", "image2.jpg"]
+  }
+  

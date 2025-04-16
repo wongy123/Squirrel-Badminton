@@ -7,5 +7,6 @@
     { "slug": "mizuno", "name": "Mizuno" },
     { "slug": "redson", "name": "Redson" },
     { "slug": "victor", "name": "Victor" },
-    { "slug": "toalson", "name": "Toalson" }
+    { "slug": "toalson", "name": "Toalson" },
+    { "slug": "misc", "name": "Misc." }
 ]

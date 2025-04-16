@@ -1,0 +1,10 @@
+{
+    "id": "nbg98",
+    "name": "NBG98",
+    "brand": "Yonex",
+    "price": 30.00,
+    "colour": ["Blue", "Silver", "Gold", "Yellow"],
+    "description": "Nanogy 98 badminton string offers a sharp feel and great repulsion for high clears and defensive shots.\n\nGauge: 0.66 mm\nLength: 10 m (33 ft) / 200 m (656 ft)\nCore: High-Intensity Nylon Multifilament\nOuter: Special Braided High Polymer Nylon Fiber\nCoating: Compound Cup-Stack Carbon Nanotube\nMade in Japan",
+    "images": ["image1.jpg", "image2.jpg"]
+  }
+  

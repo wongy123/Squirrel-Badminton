@@ -1,0 +1,10 @@
+{
+    "id": "vbs-68",
+    "name": "VBS-68",
+    "brand": "Victor",
+    "price": 30.00,
+    "colour": ["White", "Yellow", "Pink", "SkyBlue"],
+    "description": "Victor's version of BG80.\n\nHard-feeling control-focused string with good power.",
+    "images": ["image1.jpg"]
+  }
+  

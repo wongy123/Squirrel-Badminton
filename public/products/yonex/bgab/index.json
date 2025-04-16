@@ -1,0 +1,10 @@
+{
+    "id": "bgab",
+    "name": "Aerobite",
+    "brand": "Yonex",
+    "price": 32.00,
+    "colour": ["Red", "Green", "Blue"],
+    "description": "Yonex’s first ever hybrid string combo. The new AEROBITE applies heavy spin for decisive cut smashes or a solid touch for hairpins that drop straight down.\n\nGauge: Mains - 0.67 mm; Crosses - 0.61 mm\nLength: Mains - 5.5 m (18 ft) / Crosses - 5 m (16 ft); Mains - 105 m (344 ft) / Crosses - 95 m (311 ft)\nCore: High-Intensity Nylon Multifilament\nOuter: High Polymer Braided Nylon Fiber\nCoating (Mains): Polyurethane\nMade in Japan",
+    "images": ["image1.jpg"]
+  }
+  

@@ -1,0 +1,10 @@
+{
+    "id": "bg80",
+    "name": "BG80",
+    "brand": "Yonex",
+    "price": 30.00,
+    "colour": ["SkyBlue", "White", "Pink", "Yellow", "Yellow"],
+    "description": "Yonex BG80 offers a hard feel with powerful repulsion, ideal for aggressive players.\n\nGauge: 0.68 mm\nLength: 10 m (33 ft) / 200 m (656 ft)\nCore: High Polymer Nylon Multifilament with Vectran™\nOuter: Special Braided Oval Shaped High Polymer Nylon Fiber\nMade in Japan",
+    "images": ["image1.jpg", "image2.jpg", "image3.jpg"]
+  }
+  
