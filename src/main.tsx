@@ -10,7 +10,8 @@ import "slick-carousel/slick/slick-theme.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter basename="/Squirrel-Badminton">
+    <BrowserRouter >
+    {/* basename="/Squirrel-Badminton" */}
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <App />
